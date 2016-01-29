@@ -5,10 +5,9 @@
 // • The input is entered as long. The output should be a variable of type string.
 // • Do not use the built-in .NET functionality.
 
-
-class DecToHexNumber
+public class DecToHexNumber
 {
-    static void Main()
+    public static void Main()
     {
         int input = int.Parse(Console.ReadLine());
         string output = string.Empty;
@@ -48,9 +47,11 @@ class DecToHexNumber
             {
                 output = remainder.ToString();
             }
+
             finalOutput = output + finalOutput;
             input = input / 16;
         }
+
         Console.WriteLine(finalOutput);
     }
 }

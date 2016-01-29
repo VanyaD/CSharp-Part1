@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. NumbersFrom1ToN", "01. NumbersFrom1ToN\01. NumbersFrom1ToN.csproj", "{CB78D44B-F979-4650-A990-37828BFA92F7}"
 EndProject
@@ -33,7 +33,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14. DecimalToBinaryNumber",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15. HexToDecNumber", "14. HexToDecNumber\15. HexToDecNumber.csproj", "{B4D62909-ACC9-4CE2-A4E0-B1EA79E97CD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16. DecToHexNumber - not solved", "16. DecToHexNumber\16. DecToHexNumber - not solved.csproj", "{8F6698BA-A099-41FB-8D4A-72C42CDE242C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16. DecToHexNumber", "16. DecToHexNumber\16. DecToHexNumber.csproj", "{8F6698BA-A099-41FB-8D4A-72C42CDE242C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

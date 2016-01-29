@@ -6,15 +6,15 @@
 // • Elements are counted from  1  to  n , so the first element is odd, the second is even, etc.
 
 
-class OddAndEvenProduct
+public class OddAndEvenProduct
 {
-    static void Main()
+    public static void Main()
     {
         string input = Console.ReadLine();
         string[] strArr = input.Split(' ');
         int[] nums = new int[strArr.Length];
 
-        for (int i = 0; i < strArr.Length; i ++)
+        for (int i = 0; i < strArr.Length; i++)
         {
             nums[i] = int.Parse(strArr[i]);
         }
@@ -22,7 +22,7 @@ class OddAndEvenProduct
         double oddProduct = nums[0];
         double evenProduct = nums[1];
 
-        for (int i = 2; i <= strArr.Length - 1; i ++)
+        for (int i = 2; i <= strArr.Length - 1; i++)
         {
             if (i % 2 == 0)
             {
@@ -33,6 +33,7 @@ class OddAndEvenProduct
                 evenProduct = evenProduct * nums[i];
             }
         }
+
         if (oddProduct == evenProduct)
         {
             Console.WriteLine("Yes");

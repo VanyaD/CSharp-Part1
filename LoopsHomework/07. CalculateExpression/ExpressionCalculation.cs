@@ -7,12 +7,13 @@
 // • Your task is to write a program that calculates  n! / (k! * (n-k)!)  for given  n  and  k  (1 < k < n < 100). Try to use only two loops.
 
 
-class ExpressionCalculation
+public class ExpressionCalculation
 {
-    static void Main()
+    public static void Main()
     {
         Console.WriteLine("Please enter n: ");
         int n = int.Parse(Console.ReadLine());
+
         Console.WriteLine("Please enter k: ");
         int k = int.Parse(Console.ReadLine());
 
@@ -25,15 +26,18 @@ class ExpressionCalculation
         for (int i = 1; i <= n; i++)
         {
             factN = factN * i;
+
             if (i == k)
             {
                 factK = factN;
             }
+
             if (i == nMinK)
             {
                 factNMinK = factN;
-            }          
+            }
         }
+
         output = factN / (factK * factNMinK);
         Console.WriteLine("Result = {0}", output);
     }

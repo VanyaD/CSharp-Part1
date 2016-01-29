@@ -4,22 +4,43 @@
 // • Write a program that enters in integer  n  and prints 
 // the numbers  1, 2, …, n  in random order.
 
-
-    class RandomizeNumbers
+public class RandomizeNumbers
+{
+    public static void Main()
     {
-        static void Main()
-        {
-            int n = int.Parse(Console.ReadLine());
-            Random rnd = new Random();
-            int[] output = new int[n];
-            int randomNumber = 0;
+        int n = int.Parse(Console.ReadLine());
+        Random rnd = new Random();
+        int[] output = new int[n];
+        int randomNumber = rnd.Next(1, n + 1);
+        bool isDuplicate = false;
+        output[0] = randomNumber;
+        int count = 1;
 
-            for (int i = 0; i < n; i++)
+        Console.Write("{0} ", randomNumber);
+
+        while (count < n)
+        {
+            randomNumber = rnd.Next(1, n + 1);
+
+            for (int i = 0; i < count; i++)
             {
-                randomNumber = rnd.Next(1, n);
-                output[i] = randomNumber;
-                Console.Write("{0} ", output[i]);
-                Console.WriteLine();
+                if (output[i] == randomNumber)
+                {
+                    isDuplicate = true;
+                    break;
+                }              
             }
+
+            if (isDuplicate == false)
+            {
+                output[count] = randomNumber;
+                count++;
+                Console.Write("{0} ", randomNumber);
+            }
+
+            isDuplicate = false;       
         }
+
+        Console.WriteLine();
     }
+}

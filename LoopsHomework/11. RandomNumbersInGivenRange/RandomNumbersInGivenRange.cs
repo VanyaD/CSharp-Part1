@@ -4,22 +4,22 @@
 // • Write a program that enters  3  integers  n ,  min  and  max  ( min != max ) and 
 // prints  n  random numbers in the range  [min...max] 
 
-
-    class RandomNumbersInGivenRange
+public class RandomNumbersInGivenRange
+{
+    public static void Main()
     {
-        static void Main()
+        int n = int.Parse(Console.ReadLine());
+        int min = int.Parse(Console.ReadLine());
+        int max = int.Parse(Console.ReadLine());
+
+        Random rnd = new Random();
+
+        for (int i = 1; i <= n; i++)
         {
-            int n = int.Parse(Console.ReadLine());
-            int min = int.Parse(Console.ReadLine());
-            int max = int.Parse(Console.ReadLine());
-
-            Random rnd = new Random();
-            
-
-            for (int i = 1; i <= n; i ++)
-            {
-                int output = rnd.Next(min, max);
-                Console.Write("{0} ", output);
-            }
+            int output = rnd.Next(min, max);
+            Console.Write("{0} ", output);
         }
+
+        Console.WriteLine();
     }
+}

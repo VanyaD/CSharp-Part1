@@ -4,30 +4,31 @@
 // • Write a program that calculates  n! / k!  for given  n  and  k  (1 < k < n < 100).
 // • Use only one loop.
 
-    class CalculateNFactDividedByKFact
+public class CalculateNFactDividedByKFact
+{
+    public static void Main()
     {
-        static void Main()
+        Console.WriteLine("Please enter n and k, where 1 < k < n < 100.");
+
+        Console.Write("n = ");
+        int numberN = int.Parse(Console.ReadLine());
+
+        Console.Write("k = ");
+        int numberK = int.Parse(Console.ReadLine());
+
+        int factN = 1;
+        int factK = 1;
+
+        for (int i = 1; i <= numberN; i++)
         {
-            Console.WriteLine("Please enter n and k, where 1 < k < n < 100.");
+            factN = factN * i;
 
-            Console.Write("n = ");
-            int numberN = int.Parse(Console.ReadLine());
-
-            Console.Write("k = ");
-            int numberK = int.Parse(Console.ReadLine());
-
-            int factN = 1;
-            int factK = 1;
-
-
-            for (int i = 1; i <= numberN; i ++ )
+            if (i == numberK)
             {
-                factN = factN * i;
-                if (i == numberK)
-                {
-                    factK = factN;
-                }
+                factK = factN;
             }
-            Console.WriteLine("{0}!/{1}! = {2}", numberN, numberK, factN / factK);
         }
+
+        Console.WriteLine("{0}!/{1}! = {2}", numberN, numberK, factN / factK);
     }
+}

@@ -5,10 +5,9 @@
 // • The input is entered as long. The output should be a variable of type string.
 // • Do not use the built-in .NET functionality.
 
-
-class DecimalToBinaryNumber
+public class DecimalToBinaryNumber
 {
-    static void Main()
+    public static void Main()
     {
         long input = long.Parse(Console.ReadLine());
         string output = string.Empty;
@@ -20,6 +19,7 @@ class DecimalToBinaryNumber
             input = input / 2;
             output = remainder.ToString() + output;
         }
+
         Console.WriteLine(output);
     }
 }
